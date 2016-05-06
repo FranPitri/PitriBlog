@@ -1,0 +1,2 @@
+# myDjangoBlog
+Django test blog 
