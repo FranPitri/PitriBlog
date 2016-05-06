@@ -7,12 +7,12 @@ from django.contrib.auth.models import User
 
 class Author(models.Model):
     user = models.OneToOneField(User)
-    nationality = models.CharField(max_lenght = 32,
+    nationality = models.CharField(max_length = 32,
                                   default = "")
 
 class Post(models.Model):
     title = models.CharField("Titulo",
-                            max_lenght = 32)
+                            max_length = 32)
     content = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
     publicated = models.BooleanField(default = True)
