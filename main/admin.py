@@ -9,6 +9,14 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('author','date')
     list_display = ('title', 'author', 'date')
 
-admin.site.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    search_fields = ('user',)
+    list_display = ('user',)
+
+class CommentAdmin(admin.ModelAdmin):
+    search_fields = ('author',)
+    list_display = ('author','post','date')
+
+admin.site.register(Author, AuthorAdmin)
 admin.site.register(Post, PostAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)
