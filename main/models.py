@@ -16,13 +16,13 @@ class Post(models.Model):
     content = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
     publicated = models.BooleanField(default = True)
-    author = models.ForeignKeyField(Author)
+    author = models.ForeignKey(Author)
 
 class Comment(models.Model):
-    author = models.ForeignKeyField(User,
+    author = models.ForeignKey(User,
                                  null = True,
                                  blank = True)
     content = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
-    post = models.ForeignKeyField(Post)
+    post = models.ForeignKey(Post)
     approved = models.BooleanField(default = False)
