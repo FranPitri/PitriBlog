@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <p>{{usuario_actual}} lpmqlrmp</p>
+{{posts}}
+    {% for post in posts %}
+        <p>{{post.author}}</p>
+    {% endfor %}
+{% endblock %}

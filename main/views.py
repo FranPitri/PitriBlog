@@ -12,4 +12,5 @@ def home(request):
     posts = Post.objects.all()
     context['usuario_actual'] = request.user
     context['posts'] = posts
-    return render_to_response("hello.html", context)
+    #for p in posts : print posts
+    return render_to_response("home.html", context)
