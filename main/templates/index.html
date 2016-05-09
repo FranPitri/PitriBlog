@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>PitriBlog</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/materialize.css' %}"></link>
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"></link>
+
+</head>
+
+<body>
+
+    <section class="header-section">
+
+        <h1 class="tito center"><span class="red-text text-lighten-2">Pitri</span><span class="grey-text text-lighten-3">Blog</span></h1>
+
+        <nav>
+            <div class="row">
+                <div class="nav-container col s6 offset-s3 center">
+                    <ul class="nav-items grey-text text-lighten-4">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Soon</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+
+</body>
+</html>
+

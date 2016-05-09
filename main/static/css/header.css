@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    font-size: 2em;
+    font-weight: 800;
+    height: auto;
+}
+
+.tito{
+    padding-bottom: 10px;
+}
+
+
+.nav-items:first-child{
+    margin-left: 0;
+}
+
+.nav-items li{
+    margin-left:102px;
+    cursor: pointer;
+}
+
+.nav-items li:hover{
+    background-color: rgba(0, 0, 0, 0);
+    color : #FFCDD2;
+}
+
+.home{
+    font-size: 1em;
+    font-weight: 800;
+    height: auto;
+}
+
+.home:hover{
+    color : #FFCDD2;
+}
