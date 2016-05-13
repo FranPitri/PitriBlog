@@ -4,5 +4,8 @@ from django.views.generic.edit import UpdateView
 urlpatterns = patterns('',
                        url(r'^$',
                            'main.views.home',
-                           name='home')
+                           name='home'),
+                       url(r'^publications/(?P<id_post>\d+)/$',
+                           'main.views.publication',
+                           name='gotopost'),
                       )

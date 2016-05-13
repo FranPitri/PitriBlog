@@ -1,9 +1,45 @@
 {% extends 'index.html' %}
 
+{% load static %}
 {% block content %}
-    <p>{{usuario_actual}} lpmqlrmp</p>
-{{posts}}
-    {% for post in posts %}
-        <p>{{post.author}}</p>
-    {% endfor %}
+
+        <section class="main-section grey lighten-2">
+        <div class="main-content">
+
+            {% for post in posts %}
+            <div class="row">
+                <div class="article-wrapper col s10 offset-s1 grey lighten-5">
+
+                    <!-- ARTICULOS -->
+
+                    <div class="article-content">
+
+                        {% with '/articles-img/'|add:post.image_name as post_image %}
+                        <img src="{% get_media_prefix %}{{post_image}}">
+                        {% endwith%}
+
+                        <div class="text-cont">
+
+                            <h3 class="grey-text text-darken-3">{{post.title}}</h3>
+
+                            <p class="grey-text text-darken-2">
+                                {{post.content}}
+                                <br />
+                            </p>
+
+                        </div>
+
+                    <a href="{% url 'main:gotopost' post.id %}" class="button red lighten-2"><span class="grey-text text-lighten-4">Ir al articulo</span></a>
+
+                    </div>
+
+                    <!-- END -->
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        </section>
+
 {% endblock %}
