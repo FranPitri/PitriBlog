@@ -6,6 +6,6 @@ urlpatterns = patterns('',
                            'main.views.home',
                            name='home'),
                        url(r'^publications/(?P<id_post>\d+)/$',
-                           'main.views.publication',
+                           'main.views.article',
                            name='gotopost'),
                       )

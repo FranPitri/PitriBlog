@@ -128,5 +128,5 @@ STATICFILES_DIRS = [
 
 #MEDIA_URL = STATIC_URL + 'media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR , *MEDIA_URL.strip("/").split("/"))
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')

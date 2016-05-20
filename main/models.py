@@ -8,7 +8,7 @@ import os
 
 # Create your models here.
 
-fs = FileSystemStorage(location=settings.MEDIA_ROOT + "/articles-img/")
+fs_article_images = FileSystemStorage(location=settings.MEDIA_ROOT + "/articles-img/")
 
 class Author(models.Model):
     user = models.OneToOneField(User)
@@ -24,15 +24,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add = True)
     publicated = models.BooleanField(default = True)
     author = models.ForeignKey(Author)
-
-    image = models.ImageField(storage=fs)
-
-
-    '''image = models.FilePathField(path= "~/Descargas",
-                                match = "/.+(\.png$|\.jpeg$|\.jpg$)/",
-                                default="")
-    '''
-
+    image = models.ImageField(storage=fs_article_images)
 
     def image_name(self):
         return os.path.basename(self.image.name)

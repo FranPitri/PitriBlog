@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load static %}
 
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
 
 <body class="grey darken-3">
 
-    <section class="header-section">
+    <section class="header-section" style="background:url({% get_media_prefix %}/header/header-book.jpg);background-size:cover;background-position:0 60%">
 
         <h1 class="tito center"><span class="red-text text-lighten-2">Pitri</span><span class="grey-text text-lighten-3">Blog</span></h1>
 

@@ -39,3 +39,8 @@ nav {
 .home:hover{
     color : #FFCDD2;
 }
+
+.header-section{
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
