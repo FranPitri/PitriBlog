@@ -1,2 +1,2 @@
-# myDjangoBlog
-Django test blog
+# PitriBlog
+Blog creado a modo de ejercicio para la materia Programacion III del ITS Villada
