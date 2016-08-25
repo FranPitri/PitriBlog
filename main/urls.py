@@ -8,4 +8,7 @@ urlpatterns = patterns('',
                        url(r'^publications/(?P<id_post>\d+)/$',
                            'main.views.article',
                            name='gotopost'),
+                       url(r'^newarticle/$',
+                           'main.views.newpost',
+                           name='addpost'),
                       )

@@ -16,6 +16,14 @@ class Author(models.Model):
                                   default = "")
     def __unicode__(self):
         return self.user.__unicode__()
+    
+    @property
+    def first_name(self):
+        return self.user.first_name
+    
+    @property
+    def last_name(self):
+        return self.user.last_name
 
 class Post(models.Model):
     title = models.CharField("Titulo",
