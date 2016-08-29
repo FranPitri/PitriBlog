@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>PitriBlog</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/normalize.css' %}"></link>
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/skeleton.css' %}"></link>
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"></link>
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static 'css/articles.css' %}"></link>
+
+</head>
+
+<body>
+
+    <section class="header-section" data-section-name="pitri">
+
+        <div class="video-cover" data-vide-bg="{% static 'video/ocean' %}">
+            <div class="container header-container">
+                    <div class="heading">
+                        <h1 style="color:#f5f5f5;text-align:center;vertical-align: middle;font-size:4em;font-weight: 600">PitriBlog</h1>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Scripts -->
+    <script src=" {% static 'js/jquery-3.0.0.min.js'%}"></script>
+    <script src="{% static 'js/jquery.scrollify.js'%}"></script>
+    <script src="{% static 'js/jquery.vide.min.js' %}"></script>
+    <script src=" {% static 'js/code.js'%}"></script>
+
+</body>
+</html>
+

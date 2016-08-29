@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, us   er-scalable=no" />
+    <title>PitriBlog</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/normalize.css' %}">
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/skeleton.css' %}">
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="{% static  'css/createarticle.css' %}">
+</head>
+
+<body>
+
+    <section class="add-section">
+        
+        <div class="home">
+             <a href="{% url 'main:home' %}">PitriBlog ☖</a>
+        </div>
+        
+        <div class="row" style="text-align:center;padding-top:1%;">
+            <h3 style="font-weight:600;color:#212121">Create an article..</h3>
+        </div>
+        
+        <div class="container add-container">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <label for="titlebox">Title</label>
+                    <input class="u-full-width" type="text" placeholder="Title …" id="titlebox" name="title">
+                </div>
+                <div class="row">
+                    <label for="content-box">Article body</label>
+                    <textarea class="u-full-width content-box" placeholder="Write your article …" id="content-box" name="content"></textarea>
+                </div>
+                <div class="row">
+                    <input type="file" class="button" id="image-select" value="IMAGE" name="image">
+                    <label class="file-label" for="image-select">Select an image</label>
+                    <span class="file-span">none</span> 
+                </div>
+                <div class="row" style="margin-top:3%;text-align:center">
+                    <input class="button-primary" type="submit" id="submit-post" value="CREATE ARTICLE">
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+    <script src=" {% static 'js/jquery-3.0.0.min.js'%}"></script>
+    <script>
+        $(function(){
+           $('#image-select').change(function(){
+              $(".file-span").html($(this).prop('files')[0].name);
+           });
+        });
+    </script>
+    
+</body>
+</html>
