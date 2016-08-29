@@ -63,6 +63,3 @@ def newpost(request):
         return redirect("main:home")
     
     return render_to_response("createarticle.html",context)
-
-
-
